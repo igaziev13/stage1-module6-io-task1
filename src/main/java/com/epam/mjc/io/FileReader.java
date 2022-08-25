@@ -9,7 +9,6 @@ import java.io.IOException;
 public class FileReader {
 
     public Profile getDataFromFile(File file) {
-        //File f = new File("resources\\Profile.txt");
         StringBuilder data = new StringBuilder();
         try(FileInputStream inStream = new FileInputStream(file)) {
             int ch;
@@ -17,9 +16,9 @@ public class FileReader {
                 data.append((char) ch);
 
         } catch (FileNotFoundException e1) {
-            System.err.print(e1);
+
         } catch (IOException e2) {
-            System.err.print(e2);
+
         }
 
         String[] dataArray = data.toString().split("\n");
